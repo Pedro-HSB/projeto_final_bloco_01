@@ -48,7 +48,7 @@ public class Menu {
 		while (true) {
 
 			System.out.println(Cores.TEXT_CYAN_BRIGHT + Cores.ANSI_BLACK_BACKGROUND
-					+ "****************************************");
+					+ "\n\n****************************************");
 			System.out.println("                                    	");
 			System.out.println("         Pastelaria da pam   	    	");
 			System.out.println("                                    	");
