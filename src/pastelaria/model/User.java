@@ -8,18 +8,29 @@ public abstract class User {
 	private String contato;
 	private int cpf;
 	private int cnpj;
-	
-	public User(String endereco,int cpf) {
+	private int id;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public User(String endereco,int cpf,int id) {
 		super();
 		this.endereco = endereco;
 		this.cpf = cpf;
+		this.id = id;
 	}
 	
-	public User(String endereco,String contato,int cnpj) {
+	public User(String endereco,String contato,int cnpj,int id) {
 		super();
 		this.endereco = endereco;
 		this.contato = contato;
 		this.cnpj = cnpj;
+		this.id = id;
 	}
 	
 	public String getContato() {
@@ -55,11 +66,11 @@ public abstract class User {
 	}
 	public void visualizar() {
 		System.out.println("\n\n***************************************");
-		System.out.println("dados da nota fiscal");
-		System.out.println("***************************************");
-		System.out.println("Número do cnpj: " + this.cnpj);
-		System.out.println("numero e/ou email de contato: " + this.contato);
-		System.out.println("Número do cpf: " + cpf);
-		System.out.println("endereco: " + this.endereco);
+		System.out.println("            dados da nota fiscal            ");
+		System.out.println("********************************************");
+		System.out.println("    Número do cnpj: " + this.cnpj+"                  ");
+		System.out.println("    numero e/ou email de contato: " + this.contato+"                  ");
+		System.out.println("    Número do cpf: " + cpf+"                  ");
+		System.out.println("    endereco: " + this.endereco+"                  ");
 	}
 }

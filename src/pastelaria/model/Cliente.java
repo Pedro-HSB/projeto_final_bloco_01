@@ -8,22 +8,22 @@ public class Cliente extends User{
 	private Date dataCriacao;
 	
 	
-	public Cliente(String nome, String endereco,Date dataCriacao, int cpf) {
-		super(endereco, cpf);
+	public Cliente(String nome, String endereco,Date dataCriacao, int cpf,int id) {
+		super(endereco, cpf,id);
 		this.nome=nome;
 		this.dataCriacao=dataCriacao;
 		// TODO Auto-generated constructor stub
 	}
-	public Cliente(String nome, String endereco, String contato,Date dataCriacao,int cnpj) {
-		super(endereco, contato,cnpj);
+	public Cliente(String nome, String endereco, String contato,Date dataCriacao,int cnpj,int id) {
+		super(endereco, contato,cnpj,id);
 		this.nome=nome;
 		this.dataCriacao=dataCriacao;
 		// TODO Auto-generated constructor stub
 	}
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("nome do cliente: " + this.getNome());
-		System.out.println("data de cadastro: " + this.getDataCriacao());
+		System.out.println("nome do cliente: " + this.getNome()+"                  ");
+		System.out.println("data de cadastro: " + this.getDataCriacao()+"                  ");
 	}
 	public String getNome() {
 		return nome;

@@ -1,17 +1,15 @@
 package pastelaria.model;
 
-import java.time.ZonedDateTime;
-import java.util.Timer;
-
 public class Pastel extends Receita{
 
 	private String tamanho;
-	
-	public Pastel(String nome, String modoPreparo, String timeStamp,String tamanho) {
-		super(nome, modoPreparo, timeStamp);
-		// TODO Auto-generated constructor stub
-		this.tamanho=tamanho;
+
+	public Pastel(String nome, String modoPreparo, String tempoPreparo, int id, String tamanho, float preco) {
+		super(nome, modoPreparo, tempoPreparo, id,preco);
+		this.tamanho = tamanho;
 	}
+
+
 
 	public String getTamanho() {
 		return tamanho;
@@ -22,8 +20,9 @@ public class Pastel extends Receita{
 	}
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("o tamanho e: " + this.getTamanho());
+		System.out.println("     o tamanho e: " + this.getTamanho() +"                       ");
 		
 	}
+
 
 }
